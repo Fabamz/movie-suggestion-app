@@ -2,13 +2,18 @@
   "name": "movie-suggestion-app",
   "version": "0.1.0",
   "private": true,
+  "main": "index.js",
+  "type": "module",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "backend": "json-server --watch db.json --port 3000"
   },
   "dependencies": {
+    "axios": "^1.7.8",
     "core-js": "^3.8.3",
+    "node-fetch": "^3.3.2",
     "vue": "^3.2.13"
   },
   "devDependencies": {
