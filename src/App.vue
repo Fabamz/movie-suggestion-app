@@ -33,7 +33,7 @@ export default {
           throw new Error("Failed to fetch movies");
         }
         const data = await response.json();
-        this.movies = data.movies;
+        this.movies = data;
         console.log("Fetched Movies:", this.movies);
       } catch (error) {
         console.error("Error fetching movies:", error);
@@ -48,12 +48,10 @@ export default {
     },
   },
   // Now I can fetch movies when the component is mounted
-  mounted() {   
-    
-      this.fetchMovies().then(() => {
-    this.filteredMovies = this.movies; // Populate filteredMovies with all movies initially
-  });
-   
+  mounted() {
+    this.fetchMovies().then(() => {
+      this.filteredMovies = this.movies; // Populate filteredMovies with all movies initially
+    });
   },
 };
 </script>
